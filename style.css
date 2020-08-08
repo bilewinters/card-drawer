@@ -1,0 +1,63 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  justify-content: space-between;
+}
+
+.objectiveCards {
+  /* background-color: sandybrown; */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#objectives-hand {
+  flex: 1;
+}
+
+#objectives-discard {
+  /* background-color: skyblue; */
+  height: 200px;
+  width: 180px;
+}
+
+#objectives-discard > .card {
+  position: absolute;
+  height: 130px;
+}
+
+.powerCards {
+  /* background-color: sandybrown; */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#power-hand {
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+#power-discard {
+  /* background-color: skyblue; */
+  height: 200px;
+  width: 180px;
+}
+
+#power-discard > .card {
+  position: absolute;
+  height: 130px;
+}
+
+.card {
+  margin-left: 5px;
+  margin-right: 5px;
+}

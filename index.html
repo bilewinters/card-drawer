@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Card Drawer</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div class="flex-col">
+      <div class="flex-row controls">
+        <div><h1>Objective Cards</h1></div>
+        <div>
+          <input type="file" webkitdirectory id="objectives-deck-location" />
+        </div>
+        <div>Objectives left: <span id="objectives-deck-size"></span></div>
+        <div>
+          <button id="draw-objective-button">Draw Objective</button>
+        </div>
+      </div>
+      <div class="flex-row objectiveCards">
+        <div id="objectives-hand" class="flex-row"></div>
+        <div id="objectives-discard">
+          <h3>Discard (<span id="objective-discard-count">0</span>)</h3>
+        </div>
+      </div>
+      <!--  -->
+      <div class="flex-row controls">
+        <div><h1>Power Cards</h1></div>
+        <div>
+          <input type="file" webkitdirectory id="power-deck-location" />
+        </div>
+        <div>Power Cards left: <span id="power-deck-size"></span></div>
+        <div>
+          <button id="draw-power-button">Draw Power Card</button>
+        </div>
+      </div>
+      <div class="flex-row powerCards">
+        <div id="power-hand" class="flex-row"></div>
+        <div id="power-discard">
+          <h3>Discard (<span id="power-discard-count">0</span>)</h3>
+        </div>
+      </div>
+    </div>
 
-    <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
 </html>
