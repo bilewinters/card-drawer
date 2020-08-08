@@ -6,7 +6,7 @@ This little app is an experiment in making that a little easier, and a chance fo
 
 ## Development
 
-`yarn start`
+`yarn && yarn start`
 
 ## Building
 
